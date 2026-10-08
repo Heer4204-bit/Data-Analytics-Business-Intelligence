@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics & Business Intelligence | IIT-Level Curriculum</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --iit-navy: #002147;
+            --iit-gold: #D4AF37;
+            --iit-accent: #008080;
+            --light-bg: #F8F9FA;
+            --card-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #FAFAFA;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--iit-navy) 0%, #003366 100%);
+            color: #ffffff;
+            padding: 80px 0 60px;
+            border-bottom: 5px solid var(--iit-gold);
+        }
+
+        .badge-iit {
+            background-color: var(--iit-gold);
+            color: var(--iit-navy);
+            font-weight: 700;
+            padding: 8px 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        /* Stats Cards */
+        .stat-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--iit-accent);
+            text-align: center;
+        }
+
+        /* Module Cards */
+        .module-card {
+            background: #ffffff;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: var(--card-shadow);
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--iit-navy);
+        }
+
+        .module-header {
+            background-color: var(--iit-navy);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 9px 9px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .module-number {
+            font-size: 0.85rem;
+            color: var(--iit-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Tech Stack Icons */
+        .tech-badge {
+            background-color: #EBF3FA;
+            color: var(--iit-navy);
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 4px;
+        }
+
+        /* Project Section */
+        .project-card {
+            background: #ffffff;
+            border-left: 4px solid var(--iit-gold);
+            box-shadow: var(--card-shadow);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #EBF3FA;
+            color: var(--iit-navy);
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--iit-navy);
+            color: #ffffff;
+            padding: 40px 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Header -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge badge-iit mb-3"><i class="fa-solid fa-graduation-cap me-2"></i>Executive Certification Program</span>
+                    <h1 class="display-4 fw-bold mb-3">Data Analytics & Business Intelligence (DABI)</h1>
+                    <p class="lead mb-4">Master mathematical foundations, algorithmic data processing, enterprise warehouse architecture, and executive-level strategic analytics built on rigorous academic standards.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#curriculum" class="btn btn-warning btn-lg fw-bold px-4">View Curriculum</a>
+                        <a href="#projects" class="btn btn-outline-light btn-lg px-4">Capstone Projects</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="card border-0 shadow-lg text-dark">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Program Highlights</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>Duration:</strong> 6 Months (Rigorous)</li>
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>Pedagogy:</strong> Rigorous Theory + Labs</li>
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>Tools:</strong> Python, SQL, Tableau, PowerBI, Spark</li>
+                                <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><strong>Capstone:</strong> 3 Industry-Scale Projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Metrics -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h2 class="fw-bold text-navy mb-0">120+</h2>
+                        <p class="text-muted mb-0">Hours of Lectures</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h2 class="fw-bold text-navy mb-0">80+</h2>
+                        <p class="text-muted mb-0">Hands-on Lab Exercises</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h2 class="fw-bold text-navy mb-0">1:1</h2>
+                        <p class="text-muted mb-0">Mentorship Sessions</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h2 class="fw-bold text-navy mb-0">3</h2>
+                        <p class="text-muted mb-0">Enterprise Capstones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Covered -->
+    <section class="py-4 border-top border-bottom bg-light">
+        <div class="container text-center">
+            <h6 class="text-uppercase text-muted fw-bold mb-3">Technologies & Frameworks Mastered</h6>
+            <div>
+                <span class="tech-badge"><i class="fa-brands fa-python me-1"></i> Python (Pandas, NumPy, SciPy)</span>
+                <span class="tech-badge"><i class="fa-solid fa-database me-1"></i> Advanced SQL (PostgreSQL, BigQuery)</span>
+                <span class="tech-badge"><i class="fa-solid fa-chart-line me-1"></i> Power BI & DAX</span>
+                <span class="tech-badge"><i class="fa-solid fa-chart-column me-1"></i> Tableau Desktop</span>
+                <span class="tech-badge"><i class="fa-solid fa-cloud me-1"></i> AWS Redshift & Snowflake</span>
+                <span class="tech-badge"><i class="fa-solid fa-network-wired me-1"></i> Apache Spark</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Modules Section -->
+    <section id="curriculum" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase">Academic Roadmap</span>
+                <h2 class="fw-bold">Comprehensive IIT-Level Curriculum</h2>
+                <p class="text-muted">Designed by distinguished faculty and industry architects to bridge mathematical foundations and enterprise implementation.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Module 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div>
+                                <div class="module-number">Module 01</div>
+                                <h5 class="mb-0 fw-bold">Mathematical & Statistical Foundations</h5>
+                            </div>
+                            <i class="fa-solid fa-square-root-variable fa-xl text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Linear Algebra & Matrix Decompositions</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Probability Distributions & Expectation</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Hypothesis Testing (Z, t, ANOVA, Chi-Sq)</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Bayesian Inference & Estimation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div>
+                                <div class="module-number">Module 02</div>
+                                <h5 class="mb-0 fw-bold">Advanced SQL & Data Engineering</h5>
+                            </div>
+                            <i class="fa-solid fa-database fa-xl text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Complex Joins, Subqueries & CTEs</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Window Functions & Analytical Queries</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Query Optimization & Indexing</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Data Warehousing (Star/Snowflake Schema)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div>
+                                <div class="module-number">Module 03</div>
+                                <h5 class="mb-0 fw-bold">Python for Scientific Analytics</h5>
+                            </div>
+                            <i class="fa-brands fa-python fa-xl text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Data Wrangling with Pandas & NumPy</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Exploratory Data Analysis (EDA)</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Statistical Modeling with Statsmodels</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Data Visualization (Seaborn/Plotly)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div>
+                                <div class="module-number">Module 04</div>
+                                <h5 class="mb-0 fw-bold">Business Intelligence & Dashboarding</h5>
+                            </div>
+                            <i class="fa-solid fa-chart-pie fa-xl text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Data Modeling in Power BI / Tableau</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Advanced DAX Formulas & Calculated Measures</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Interactive Storytelling & UX Design</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Row-Level Security & Governance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div>
+                                <div class="module-number">Module 05</div>
+                                <h5 class="mb-0 fw-bold">Predictive Analytics & Forecasting</h5>
+                            </div>
+                            <i class="fa-solid fa-arrow-trend-up fa-xl text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Multiple Linear & Logistic Regression</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Time Series Decomposition (ARIMA, Prophet)</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Customer Lifetime Value (CLV) Modeling</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Segmentation & Clustering Algorithms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div>
+                                <div class="module-number">Module 06</div>
+                                <h5 class="mb-0 fw-bold">Big Data & Enterprise Analytics</h5>
+                            </div>
+                            <i class="fa-solid fa-network-wired fa-xl text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Distributed Computing with PySpark</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>Cloud Data Warehouses (Snowflake)</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>ETL Orchestration Pipelines</li>
+                                <li class="mb-2"><i class="fa-solid fa-chevron-right text-primary me-2"></i>BI Strategy & Decision Frameworks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Projects -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase">Practical Exposure</span>
+                <h2 class="fw-bold">IIT Capstone Projects</h2>
+                <p class="text-muted">Solve real-world datasets provided by corporate partners.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <span class="badge bg-navy text-white mb-2">E-Commerce</span>
+                        <h5 class="fw-bold">Supply Chain & Churn Optimization</h5>
+                        <p class="text-muted small">Analyze multi-million row operational datasets to reduce delivery latency and predict customer churn using Python and SQL.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <span class="badge bg-navy text-white mb-2">FinTech</span>
+                        <h5 class="fw-bold">Financial Risk Analytics Dashboard</h5>
+                        <p class="text-muted small">Build a automated, real-time Power BI dashboard incorporating complex DAX modeling to assess portfolio default risk.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <span class="badge bg-navy text-white mb-2">Healthcare</span>
+                        <h5 class="fw-bold">Predictive Resource Allocation</h5>
+                        <p class="text-muted small">Construct time-series forecasting models to predict ICU bed requirements and optimize inventory logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h4 class="fw-bold mb-3">Advance Your Career with IIT-Caliber Pedagogy</h4>
+            <p class="text-muted mb-4">Empowering professionals with analytical rigor and strategic business vision.</p>
+            <p class="small text-muted mb-0">&copy; 2026 Data Analytics & Business Intelligence Program. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
